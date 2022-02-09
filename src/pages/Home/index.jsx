@@ -31,10 +31,10 @@ const Home = () => {
     fromQuantity = 1;
   if (quantityInFromInput) {
     fromQuantity = quantity;
-    toQuantity = quantity * exchangeCurrency;
+    toQuantity = (quantity * exchangeCurrency).toFixed(5);
   } else {
     toQuantity = quantity;
-    fromQuantity = quantity / exchangeCurrency;
+    fromQuantity = (quantity / exchangeCurrency).toFixed(5);
   }
 
   const handleChangeFromCurrency = (e) => {
